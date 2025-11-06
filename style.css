@@ -1,0 +1,119 @@
+.heading{
+    margin-left: 80px !important;
+    font-weight: bold;
+}
+a{
+    color: black !important;
+    font-size: large;
+    
+}
+a:hover{
+    color: white !important;
+}
+.count{
+    background-color: red;
+    padding: 5px 10px 5px 10px;
+    border-radius: 100px;
+}
+.Btn{
+      padding: 10px 40px 10px 40px;
+      margin: 10px 0px 10px 0px;
+      border: 3px solid red;
+      border-radius: 100px;
+      background-color:red;
+      color: #ffc107;
+      font-weight: bold;
+      letter-spacing: 1px;
+}
+.Btn:hover{
+    border: 3px solid #ffc107;
+    background-color: #ffc107;
+    color: red;
+}
+img{
+    height: 18rem;
+    cursor: pointer;
+    border-radius: 25px !important;
+
+}
+.card{
+    border: 3px solid #ffc107 !important;
+    border-radius: 25px !important;
+    text-align: center;
+    
+}
+.card:hover{
+    transform: scale(1.1);
+     box-shadow: 5px 8px 25px black;
+
+}
+.food-cards{
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.Inp{
+    padding: 10px 80px 10px 80px;
+     margin: 10px 0px 10px 0px;
+     
+     text-align: center;
+     outline: none;
+     border: 3px solid red;
+     border-radius: 100px;
+     cursor: pointer;
+     
+}
+.Contact{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+h1{
+    margin-top: 50px !important;
+    font-size: 50px !important;
+    margin-bottom: 20px !important;
+}
+.contact-form{
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+}
+.bg-color{
+background: linear-gradient(90deg,orange,red) !important;
+}
+.Footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+.footer1{
+    padding-bottom: 200px;
+}
+.first{
+    text-align: center;
+    margin: 80px 0px 80px 0px;
+}
+.min{
+    background-color: yellow;
+    padding: 0px 10px 0px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+}
+.num{
+    padding: 0px 15px 0px 15px;
+    cursor: pointer;
+}
+.plus{
+    background-color: red;
+     padding: 0px 10px 0px 10px;
+     border-radius: 30px;
+     cursor: pointer;
+     border: none;
+}

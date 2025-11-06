@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body >
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
+  <div class="container-fluid ">
+    <h2 class="navbar-brand heading" >Friends Fast Food</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ">
+       <li class="nav-item">
+          <a class="nav-link fw-semibold texthover mx-4" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold texthover mx-4" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fw-semibold texthover mx-4" href="orderdetails.html">
+              <span class="count" id="counter">0</span>
+           <i class="text-danger fs-3 me-4 fa-solid fa-cart-shopping"></i>
+          </a>
+        </li>
+     </ul>
+    </div>
+  </div>
+</nav> 
+
+ <!-- Card Section -->
+  <div class="food-cards">
+       <!-- First card -->
+    <div class="card" style="width: 18rem;">
+  <img src="Images/bihare boti roll.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">Bihari Boti Roll</h3>
+    <h4 class="card-text text-danger">Price : 350</h4>
+    <button class="Btn" onclick="order1()" >Order Know</button>
+  </div>
+</div>
+<!-- Second card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/cheese burger.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">Cheese Zinger Burger</h3>
+    <h4 class="card-text text-danger">Price : 300</h4>
+   <button class="Btn" onclick="order2()">Order Know</button>
+  </div>
+</div>
+<!-- Third card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/chesse pizza.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h3 class="card-title">Cheese Pizza</h3>
+  
+      <h5 class="text-danger">
+        Small Pizza Price : 600 <br>
+        Medium Pizza Price : 900 <br>
+        Large Pizza Price : 1200
+      </h5>
+
+   <button class="Btn" onclick="order3()">Order Know</button>
+  </div>
+</div>
+<!-- Fourth card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/chikeen pizza.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+     <h3 class="card-title">Chicken Pizza</h3>
+  <h5 class="text-danger">
+        Small Pizza Price : 600 <br>
+        Medium Pizza Price : 900 <br>
+        Large Pizza Price : 1200
+      </h5>
+   <button class="Btn" onclick="order4()">Order Know</button>
+  </div>
+</div>
+<!-- Fifth card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/fajita pizza.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+     <h3 class="card-title">Fajita Pizza</h3>
+   <h5 class="text-danger">
+        Small Pizza Price : 600 <br>
+        Medium Pizza Price : 900 <br>
+        Large Pizza Price : 1200
+      </h5>
+   <button class="Btn" onclick="order5()">Order Know</button>
+  </div>
+</div>
+<!-- Sixth card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/kabab roll.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+     <h3 class="card-title">Kabab Roll</h3>
+    <h4 class="card-text text-danger">Price : 400</h4>
+   <button class="Btn"onclick="order6()">Order Know</button>
+  </div>
+</div>
+<!-- Seventh card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/Kakori Kebab.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+   <h3 class="card-title">Dhaka Kabab</h3>
+    <h4 class="card-text text-danger">Price : 40</h4>
+   <button class="Btn"onclick="order7()">Order Know</button>
+  </div>
+</div>
+<!-- Eight card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/Lachha Paratha.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+     <h3 class="card-title">Lachha Paratha</h3>
+    <h4 class="card-text text-danger">Price : 100</h4>
+   <button class="Btn" onclick="order8()">Order Know</button>
+  </div>
+</div>
+<!-- Ninth card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/malai boti roll.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">Malai Boti Roll</h3>
+    <h4 class="card-text text-danger">Price : 350</h4>
+   <button class="Btn"onclick="order9()">Order Know</button>
+  </div>
+</div>
+<!-- Tenth  card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/malai boti.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h3 class="card-title">Malai Boti</h3>
+    <h4 class="card-text text-danger">Price : 350</h4>
+   <button class="Btn"onclick="order10()">Order Know</button>
+  </div>
+</div>
+<!-- Eleventh card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/malai tikka.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">Malai Tikka</h3>
+    <h4 class="card-text text-danger">Price : 350</h4>
+   <button class="Btn"onclick="order11()">Order Know</button>
+  </div>
+</div>
+<!-- Twelveth card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/reguler burger.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+   <h3 class="card-title">Regular Burger</h3>
+    <h4 class="card-text text-danger">Price : 200</h4>
+   <button class="Btn" onclick="order12()">Order Know</button>
+  </div>
+</div>
+<!-- Thirteen card -->
+<div class="card" style="width: 20rem;">
+  <img src="Images/tikka.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h3 class="card-title">Tikka</h3>
+    <h4 class="card-text text-danger">Price : 300</h4>
+   <button class="Btn" onclick="order13()">Order Know</button>
+  </div>
+</div>
+<!-- Fourtheen card -->
+  <div class="card" style="width: 18rem;">
+  <img src="Images/zinger burger.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h3 class="card-title">Zinger Burger</h3>
+    <h4 class="card-text text-danger">Price : 250</h4>
+   <button class="Btn" onclick="order14()">Order Know</button>
+  </div>
+</div>
+<!-- Fifteen card -->
+<div class="card" style="width: 18rem;">
+  <img src="Images/zinger roll.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+     <h3 class="card-title">Zinger Roll</h3>
+    <h4 class="card-text text-danger">Price : 250</h4>
+   <button class="Btn"onclick="order15()">Order Know</button>
+  </div>
+</div>
+  </div>
+<!-- Card section end -->
+
+  <div class="Footer">
+    <div class="footer1">
+      <h3>Call Us</h3>
+      <h5>0320194484</h5>
+      <br><br>
+      <h3>Addreess</h3>
+      <h5>Karachi Liaqtabad Dakhana</h5>
+    </div>
+    <div >
+      <h3>Over Timming</h3>
+   <h5>   
+    <pre>Monday            3:00 PM - 3:00 AM</pre>
+    <pre>Tuesday           3:00 PM - 3:00 AM</pre>
+    <pre>Wednesday         3:00 PM - 3:00 AM</pre>
+    <pre>Thusday           3:00 PM - 3:00 AM</pre>
+    <pre>Friday            3:00 PM - 3:00 AM</pre>
+    <pre>Saturday          3:00 PM - 3:00 AM</pre>
+    <pre>Sunday            3:00 PM - 3:00 AM</pre>
+  </h5>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
